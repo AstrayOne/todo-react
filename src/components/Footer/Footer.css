@@ -1,0 +1,89 @@
+.footer {
+  display: none;
+  position: relative;
+  width: 550px;
+  height: 50px;
+  background-color: white;
+  border-top: solid 1px #ededed;
+  color: #777;
+}
+
+.footer_visible {
+  display: block;
+}
+
+.counter {
+  display: block;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.button {
+  display: block;
+  position: absolute;
+  top: 12px;
+  height: 15px;
+  padding: 3px 7px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #777;
+  cursor: pointer;
+}
+
+.button:hover {
+  border-color: rgba(175, 47, 47, 0.2);
+}
+
+.button_selected {
+  border-color: rgba(175, 47, 47, 0.2);
+}
+
+.button_all {
+  width: 15px;
+  left: 180px;
+}
+
+.button:hover {
+  border-color: rgba(175, 47, 47, 0.2);
+}
+
+.button_selected {
+  border-color: rgba(175, 47, 47, 0.2);
+}
+
+.button_active {
+  width: 38px;
+  left: 225px;
+}
+
+.button:hover {
+  border-color: rgba(175, 47, 47, 0.2);
+}
+  
+.button_selected {
+  border-color: rgba(175, 47, 47, 0.2);
+}
+
+.button_completed {
+  width: 67px;
+  left: 288px;
+}
+
+.button_clear-сompleted {
+  display: block;
+  width: 110px;
+  left: 420px;
+  border: none;
+}
+
+.button_clear-сompleted:hover {
+  width: 110px;
+  left: 420px;
+  border: none;
+  text-decoration: underline;
+}
+
+

@@ -1,0 +1,97 @@
+.todo-item {
+  position: relative;
+  width: 490px;
+  list-style: none;
+  min-height: 58px;
+  padding-left: 60px;
+  line-height: 58px;
+  font-size: 24px;
+  background-image: url('./img/uncheked.svg');
+  background-repeat: no-repeat;
+  background-position: left;
+  border-top: solid 1px #ededed;
+}
+
+.todo-item_edited {
+  background: none;
+  width: 484px;
+}
+
+.todo-item__check {
+  position: absolute;
+  top: 0px; 
+  bottom: 0px;
+  margin: auto 0;
+  left: 0px;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.todo-item__check_edited {
+  display: none;
+}
+
+.todo-item_done {
+  background-image: url("./img/cheked.svg");
+  color: #d9d9d9;
+}
+
+.todo-item__close {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  bottom: 0px;
+  width: 20px;
+  height: 40px;
+  margin: auto 0;
+  color: rgba(175, 47, 47, 1);
+  font-size: 30px;
+  opacity: 0; 
+  cursor: pointer;
+}
+
+.todo-item__close:hover {
+  opacity: .7;
+}
+
+.todo-item__close_visible {
+  opacity: .5;
+}
+
+.todo-item__close::after {
+  position: absolute;
+  content: '×';
+  line-height: 40px;
+  top: 0px;
+}
+
+.todo-item__close_edited {
+  display: none;
+}
+
+.todo-item__label {
+  display: block;
+  width: 450px;
+  padding: 15px 0px;
+  line-height: 1.2;
+  word-break: break-all;
+  cursor: pointer;
+}
+
+.todo-item__label_edited {
+  display: none;
+}
+
+.todo-item__label_done {
+  text-decoration: line-through;
+}
+
+.todo-item__input {
+  display: block;
+ 
+  width: 484px;
+  height: 52px;
+  font-size: 24px;
+}

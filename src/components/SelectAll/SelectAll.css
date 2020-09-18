@@ -1,0 +1,30 @@
+.select-all {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50px;
+    height: 67px;
+    font-size: 20px;
+    color: #e6e6e6;
+    opacity: 0; 
+    cursor: pointer;
+  }
+  
+  .select-all_checked {
+    color: #767676;
+  }
+  
+  .select-all::after {
+    position: absolute;
+    z-index: 1000; 
+    content: '❯';
+    transform: rotate(90deg);
+    top: 20px;
+    left: 20px;
+    opacity: 1;
+  }
+
+  .select-all_visible {
+    opacity: 1;
+  }
+  

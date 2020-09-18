@@ -1,0 +1,15 @@
+input::placeholder {
+  color: #e6e6e6;
+}
+  
+.new-todo {
+  position: relative;
+  width: 500px;
+  height: 65px;
+  padding-left: 50px;
+  background: rgba(0, 0, 0, 0.003);
+  border: none;
+  outline: none;
+  font-style: italic;
+  font-size: 24px;
+}
