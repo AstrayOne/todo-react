@@ -38,19 +38,18 @@ const loadTodos = (state) => {
 };
 
 const addTodo = (state, text) => {
-  let newIsAllSelected;
   const newLastId = state.lastId + 1;
   const newItem = new Todo(newLastId, text, true);
+  const newTodos = [...state.todos, newItem];
+
+  const newIsAllSelected = checkSelectAll(newTodos);
 
   const newState = {
     ...state,
+    isAllSelected: newIsAllSelected,
     lastId: newLastId,
-    todos: [...state.todos, newItem],
+    todos: newTodos,
   };
-
-  newIsAllSelected = checkSelectAll(newState.todos);
-
-  newState.isAllSelected = newIsAllSelected;
 
   SaveData(newState);
 
@@ -81,24 +80,25 @@ const deleteTodo = (state, todoId) => {
 };
 
 const checkTodo = (state, todoId) => {
-  let newIsAllSelected;
   const todo = state.todos.find(({ id }) => id === todoId);
   const todoIndex = state.todos.findIndex(({ id }) => id === todoId);
 
   todo.isActive = !todo.isActive;
 
+  const newTodos = [
+    ...state.todos.slice(0, todoIndex),
+    todo,
+    ...state.todos.slice(todoIndex + 1),
+  ];
+
+  const newIsAllSelected = checkSelectAll(newTodos);
+
   const newState = {
     mode: state.mode,
     isAllSelected: newIsAllSelected,
     lastId: state.lastId,
-    todos: [
-      ...state.todos.slice(0, todoIndex),
-      todo,
-      ...state.todos.slice(todoIndex + 1),
-    ],
+    todos: newTodos,
   };
-
-  newState.isAllSelected = checkSelectAll(newState.todos);
 
   SaveData(newState);
 
